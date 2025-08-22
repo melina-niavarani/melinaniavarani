@@ -1,8 +1,5 @@
 <template >
-  <div @mousemove="handleMouseMove" class="box">
-    <div class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
-    :style="{background: `radial-gradient(600px at ${xPosition}px ${yPosition}px, rgba(29, 78, 216, 0.15), transparent 80%)`}">
-    </div>
+  <div class="box">
     <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <section class="lg:flex lg:gap-4 lg:justify-between">
         <header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
@@ -42,21 +39,6 @@
       projects,
       experience,
       Footer
-    },
-    data() {
-      return {
-        xPosition: `519`,
-        yPosition: `322`,
-      }
-    },
-    methods: {
-       handleMouseMove({x , y}) {
-        this.xPosition = x
-        this.yPosition = y
-       }
     }
-
   }
-
-
 </script>

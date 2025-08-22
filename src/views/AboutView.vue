@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  // No mouse tracking needed - handled globally
+}
+</script>
+
 <style>
 @media (min-width: 1024px) {
   .about {
