@@ -1,22 +1,22 @@
 <template>
     <nav class="nav hidden lg:block">
-        <ul class="mt-16 w-max">
+        <ul class="mt-16 w-max space-y-2">
             <li>
-                <a class="group flex items-center py-3" href="#about">
-                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
+                <a class="group flex items-center py-4 px-4 rounded-2xl glass-nav glass-nav-hover" href="#about">
+                    <span class="nav-indicator mr-4 h-1 w-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full transition-all group-hover:w-16 group-hover:from-primary-400 group-hover:to-accent-400 group-focus-visible:w-16 group-focus-visible:from-primary-400 group-focus-visible:to-accent-400 motion-reduce:transition-none"></span>
+                    <span class="nav-text text-sm font-semibold uppercase tracking-widest text-neutral-400 group-hover:text-neutral-100 group-focus-visible:text-neutral-100 transition-colors duration-300">About</span>
                 </a>
             </li>
             <li>
-                <a class="group flex items-center py-3" href="#experience">
-                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
+                <a class="group flex items-center py-4 px-4 rounded-2xl glass-nav glass-nav-hover" href="#experience">
+                    <span class="nav-indicator mr-4 h-1 w-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full transition-all group-hover:w-16 group-hover:from-primary-400 group-hover:to-accent-400 group-focus-visible:w-16 group-focus-visible:from-primary-400 group-focus-visible:to-accent-400 motion-reduce:transition-none"></span>
+                    <span class="nav-text text-sm font-semibold uppercase tracking-widest text-neutral-400 group-hover:text-neutral-100 group-focus-visible:text-neutral-100 transition-colors duration-300">Experience</span>
                 </a>
             </li>              
             <li>
-                <a class="group flex items-center py-3" href="#projects">
-                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
+                <a class="group flex items-center py-4 px-4 rounded-2xl glass-nav glass-nav-hover" href="#projects">
+                    <span class="nav-indicator mr-4 h-1 w-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full transition-all group-hover:w-16 group-hover:from-primary-400 group-hover:to-accent-400 group-focus-visible:w-16 group-focus-visible:from-primary-400 group-focus-visible:to-accent-400 motion-reduce:transition-none"></span>
+                    <span class="nav-text text-sm font-semibold uppercase tracking-widest text-neutral-400 group-hover:text-neutral-100 group-focus-visible:text-neutral-100 transition-colors duration-300">Projects</span>
                 </a>
             </li>
         </ul>
