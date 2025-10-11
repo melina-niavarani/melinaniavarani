@@ -25,6 +25,9 @@ const container = ref(null)
 let jitsiApi = null
 let isModerator = false
 
+// using meet.jit.si free server
+const JITSI_DOMAIN = 'meet.jit.si'
+
 onMounted(async () => {
   try {
     const roomToJoin = generateRoomName(props.roomName)
@@ -116,7 +119,7 @@ function loadJitsiScript() {
     
     // load the script
     const script = document.createElement('script')
-    script.src = 'https://meet.jit.si/external_api.js'
+    script.src = `https://${JITSI_DOMAIN}/external_api.js`
     script.async = true
     script.onload = () => resolve()
     script.onerror = () => reject(new Error('Failed to load Jitsi'))
@@ -140,17 +143,25 @@ async function createJitsiMeeting(roomName, isModerator) {
     parentNode: container.value,
     lang: props.lang,
     userInfo: {
-      displayName: displayName
+      displayName: displayName,
+      email: `${displayName.replace(/\s/g, '').toLowerCase()}@guest.local`
     },
     configOverwrite: {
       startWithAudioMuted: false,
       startWithVideoMuted: false,
       enableWelcomePage: false,
       prejoinPageEnabled: false,
+      requireDisplayName: false,
       disableDeepLinking: true,
       defaultLanguage: props.lang,
       enableNoisyMicDetection: true,
       resolution: 720,
+      // disable lobby/waiting room completely
+      enableLobbyChat: false,
+      autoKnockLobby: false,
+      enableInsecureRoomNameWarning: false,
+      disableInviteFunctions: false,
+      lobbyEnabled: false,
       // moderator gets extra features
       disableRemoteMute: !isModerator,
       remoteVideoMenu: {
@@ -175,6 +186,7 @@ async function createJitsiMeeting(roomName, isModerator) {
       DEFAULT_BACKGROUND: '#1a1a1a',
       DEFAULT_REMOTE_DISPLAY_NAME: 'Remote User',
       DISABLE_VIDEO_BACKGROUND: false,
+      DISABLE_JOIN_LEAVE_NOTIFICATIONS: false,
       TOOLBAR_BUTTONS: [
         'microphone', 
         'camera', 
@@ -197,13 +209,19 @@ async function createJitsiMeeting(roomName, isModerator) {
     }
   }
   
-  jitsiApi = new window.JitsiMeetExternalAPI('meet.jit.si', options)
+  jitsiApi = new window.JitsiMeetExternalAPI(JITSI_DOMAIN, options)
   
   // listen to conference events
   jitsiApi.addEventListener('videoConferenceJoined', (e) => {
     if (isModerator) {
       console.log('✅ Room created! You are the host.')
       showHostNotification()
+      // disable lobby for this room
+      try {
+        jitsiApi.executeCommand('toggleLobby', false)
+      } catch (err) {
+        console.log('Could not disable lobby:', err)
+      }
     } else {
       console.log('✅ Joined the room')
     }
