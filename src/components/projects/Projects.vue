@@ -10,6 +10,34 @@
             </p>
           </div>
         <div class="space-y-8">
+            <!-- Video Call Demo -->
+            <div class="glass-card p-8 card-hover animate-fade-in">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold">
+                            <router-link class="group/link inline-flex items-baseline font-bold leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 transition-colors duration-200" to="/demo/call" aria-label="Video Call Demo">
+                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                <span class="gradient-text">Video Call Demo</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-5 w-5 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-2 translate-y-px" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                                </svg>
+                            </router-link>
+                        </h3>
+                        <p class="text-neutral-300 leading-relaxed">A real video calling app with host/participant roles - first person to join becomes the host with moderator controls! Features HD video/audio, screen sharing, live chat, and supports English, Persian, and Arabic. No registration needed, fully encrypted.</p>
+                        <div class="flex flex-wrap gap-2" aria-label="Technologies used:">
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">Vue 3</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Jitsi Meet API</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">WebRTC</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Host/Moderator 👑</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="project-image-container">
+                        <img src='@/assets/images/videocall-demo.png' alt="Video Call Demo Screenshot" loading="lazy" class="project-image">
+                    </div>
+                </div>
+            </div>
+
             <div class="glass-card p-8 card-hover animate-fade-in">
                 <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                     <div class="space-y-4">

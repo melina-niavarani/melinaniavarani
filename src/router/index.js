@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/archive',
       name: 'projects',
       component: () => import('../views/Archive.vue')
+    },
+    {
+      path: '/demo/call',
+      name: 'video-call-demo',
+      component: () => import('../views/DemoCall.vue')
     }
   ]
 })

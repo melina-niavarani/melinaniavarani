@@ -71,7 +71,7 @@
   }
   
   .modern-button {
-    @apply relative overflow-hidden rounded-2xl px-6 py-3 font-semibold text-white shadow-2xl transition-all duration-500 ease-out hover:scale-105;
+    @apply relative overflow-hidden rounded-2xl px-6 py-3 font-semibold text-white shadow-2xl transition-all duration-500 ease-out hover:scale-105 flex items-center;
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.8) 0%, rgba(168, 85, 247, 0.8) 100%);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
