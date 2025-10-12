@@ -15,51 +15,17 @@ A modern, responsive portfolio website showcasing my work as a Frontend Develope
 - **Experience Section**: Detailed work history and accomplishments
 - **SEO Optimized**: Built with best practices for search engine visibility
 
-## 🎥 Video Call Demo
+## 🎥 Video Call
 
-A real video calling app powered by Jitsi Meet. Works just like Google Meet - create a meeting or join with a code!
+Real video calling powered by Jitsi Meet. Create meetings or join with codes - just like Google Meet.
 
-### Features
-- 🎥 Real HD video & audio with multiple participants
-- 🖥️ Screen sharing
-- 💬 Live chat
-- 🌍 Works in English, Persian, and Arabic
-- 🔒 No registration needed, encrypted
-- 📱 Works on desktop, tablet, and mobile
-- 🎨 Clean dark theme UI
+**Features:** HD video/audio, screen sharing, chat, mobile support, no registration
 
-### How it works
+**How it works:** "New Meeting" → share code → others join with code
 
-1. Click "New Meeting" to create a room (generates unique code)
-2. Share the code with others
-3. They click "Enter a Code" and type your code
-4. Everyone joins and can video chat instantly!
+**Tech:** Vue 3 + Jitsi Meet iframe
 
-Built with Jitsi Meet's free servers (no backend needed!)
-
-### Built with
-- Vue.js 3 (Composition API)
-- Jitsi Meet External API
-- Tailwind CSS
-- Vue Router
-- Deployed on Netlify
-
-### Try it live
-Visit `/demo/call` on the website to test it!
-
-### What's cool about it
-- Auto-generates room names if you don't provide one
-- Adjustable video quality (up to 1080p)
-- Tracks who joins/leaves
-- Works great on mobile
-- Error handling with nice fallback UI
-
-### Ideas for later
-- Add room passwords
-- Recording feature
-- Waiting room (moderator approval)
-- Call quality stats
-- Maybe host our own Jitsi server
+Try it: `/demo/call`
 
 ## 🛠️ Tech Stack
 

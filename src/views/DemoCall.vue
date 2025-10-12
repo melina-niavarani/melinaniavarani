@@ -7,7 +7,7 @@
           Video Call 
         </h1>
         <p class="text-base md:text-lg text-neutral-300 max-w-2xl mx-auto px-4">
-          Real video calling with host/participant roles
+          Real video calling - just like Google Meet
         </p>
       </div>
 
@@ -53,37 +53,39 @@
           </div>
         </div>
 
-        <!-- Features Info -->
+        <!-- How It Works -->
         <div class="mt-12 glass-card p-6 max-w-3xl mx-auto">
-          <h3 class="text-lg font-semibold text-neutral-200 mb-4 text-center">What you get</h3>
-          <div class="grid md:grid-cols-3 gap-4 text-sm text-neutral-400">
+          <h3 class="text-lg font-semibold text-neutral-200 mb-4 text-center">How it works</h3>
+          <div class="space-y-4 text-sm">
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              <div>
-                <div class="font-semibold text-neutral-200 mb-1">Instant Start</div>
-                <div>No waiting, no approval needed</div>
+              <div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center shrink-0 text-white font-bold text-xs">1</div>
+              <div class="text-neutral-300">
+                <strong class="text-neutral-100">Create meeting:</strong> Click "New Meeting" - creates a unique room code
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              <div>
-                <div class="font-semibold text-neutral-200 mb-1">HD Quality</div>
-                <div>Video/audio up to 1080p</div>
+              <div class="w-6 h-6 rounded-full bg-accent-600 flex items-center justify-center shrink-0 text-white font-bold text-xs">2</div>
+              <div class="text-neutral-300">
+                <strong class="text-neutral-100">Share the code:</strong> Send the code to people you want to join
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              <div>
-                <div class="font-semibold text-neutral-200 mb-1">No Sign-up</div>
-                <div>Start in seconds, encrypted</div>
+              <div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center shrink-0 text-white font-bold text-xs">3</div>
+              <div class="text-neutral-300">
+                <strong class="text-neutral-100">Others join:</strong> They enter the code and join instantly
               </div>
             </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-accent-600 flex items-center justify-center shrink-0 text-white font-bold text-xs">4</div>
+              <div class="text-neutral-300">
+                <strong class="text-neutral-100">Video chat:</strong> Everyone can see and hear each other, share screens, and chat!
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-6 border-t border-neutral-700 text-center">
+            <p class="text-xs text-neutral-500">
+              💡 Powered by Jitsi Meet - completely free and open source
+            </p>
           </div>
         </div>
       </div>
@@ -127,20 +129,6 @@
             <p class="text-xs text-neutral-500 mt-1">
               Enter the meeting code shared with you
             </p>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-neutral-300 mb-2">
-              Language
-            </label>
-            <select 
-              v-model="selectedLang"
-              class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-neutral-100 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
-            >
-              <option value="en">English</option>
-              <option value="fa">فارسی (Persian)</option>
-              <option value="ar">العربية (Arabic)</option>
-            </select>
           </div>
 
           <button 
@@ -193,8 +181,7 @@
 
         <VideoCall 
           :userName="name" 
-          :roomName="room" 
-          :lang="selectedLang" 
+          :roomName="room"
         />
 
       </div>
@@ -221,27 +208,20 @@ import VideoCall from '@/components/VideoCall.vue'
 
 const name = ref('Melina')
 const room = ref('')
-const selectedLang = ref('en')
 const started = ref(false)
 const showJoinForm = ref(false)
 
-
 function generateMeetingCode() {
-  // generate a random code with timestamp to ensure uniqueness
   const timestamp = Date.now().toString(36).slice(-4)
-  const randomString = () => Math.random().toString(36).substring(2, 4)
-  return `${randomString()}${timestamp}${randomString()}`
+  const random = () => Math.random().toString(36).substring(2, 4)
+  return `${random()}${timestamp}${random()}`
 }
 
 function createNewMeeting() {
-  // generate random meeting code (always unique and unlocked)
   room.value = generateMeetingCode()
-  // prompt for name if not set
   if (!name.value || name.value === 'Melina') {
     const userName = prompt('Enter your name:', 'Melina')
-    if (userName) {
-      name.value = userName
-    }
+    if (userName) name.value = userName
   }
   started.value = true
 }
@@ -260,7 +240,6 @@ function goBack() {
 function endCall() {
   started.value = false
   showJoinForm.value = false
-  // Reset
   name.value = 'Melina'
   room.value = ''
 }
