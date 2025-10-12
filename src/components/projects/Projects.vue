@@ -23,13 +23,13 @@
                                 </svg>
                             </router-link>
                         </h3>
-                        <p class="text-neutral-300 leading-relaxed">A real video calling app with host/participant roles - first person to join becomes the host with moderator controls! Features HD video/audio, screen sharing, live chat, and supports English, Persian, and Arabic. No registration needed, fully encrypted.</p>
+                        <p class="text-neutral-300 leading-relaxed">A real video calling app just like Google Meet! Create a meeting or join with a code. Features HD video/audio, screen sharing, live chat, and supports English, Persian, and Arabic. No registration needed, fully encrypted.</p>
                         <div class="flex flex-wrap gap-2" aria-label="Technologies used:">
                             <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">Vue 3</span>
-                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Jitsi Meet API</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Jitsi Meet</span>
                             <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">WebRTC</span>
-                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Host/Moderator 👑</span>
-                            <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">Real-time</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-accent-300">Real-time</span>
+                            <span class="glass-card px-3 py-1 text-xs font-medium text-primary-300">P2P</span>
                         </div>
                     </div>
                     <div class="project-image-container">

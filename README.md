@@ -17,10 +17,9 @@ A modern, responsive portfolio website showcasing my work as a Frontend Develope
 
 ## 🎥 Video Call Demo
 
-A real video calling app with host/participant roles. First person to join becomes the host with moderator controls!
+A real video calling app powered by Jitsi Meet. Works just like Google Meet - create a meeting or join with a code!
 
 ### Features
-- 👑 **Host/Moderator System**: First to join = host with extra controls
 - 🎥 Real HD video & audio with multiple participants
 - 🖥️ Screen sharing
 - 💬 Live chat
@@ -31,11 +30,10 @@ A real video calling app with host/participant roles. First person to join becom
 
 ### How it works
 
-1. Enter your name and a room name
-2. **First person in = Host 👑** (gets moderator controls)
-3. Others join as participants
-4. Host can mute/kick participants
-5. Room expires after 24 hours or when host leaves
+1. Click "New Meeting" to create a room (generates unique code)
+2. Share the code with others
+3. They click "Enter a Code" and type your code
+4. Everyone joins and can video chat instantly!
 
 Built with Jitsi Meet's free servers (no backend needed!)
 

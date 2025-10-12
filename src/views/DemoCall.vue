@@ -4,20 +4,102 @@
       <!-- Header -->
       <div class="text-center mb-12">
         <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4">
-          Video Call Demo
+          Video Call 
         </h1>
         <p class="text-base md:text-lg text-neutral-300 max-w-2xl mx-auto px-4">
           Real video calling with host/participant roles
         </p>
-        <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary-600/10 border border-primary-600/30 rounded-lg">
-          <span class="text-sm text-primary-300">👑 First to join = Host with extra controls!</span>
+      </div>
+
+      <!-- Main Options (Google Meet style) -->
+      <div v-if="!started && !showJoinForm" class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- New Meeting -->
+          <div class="glass-card p-8 hover:border-primary-500/50 transition-all cursor-pointer group" @click="createNewMeeting">
+            <div class="text-center">
+              <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-white">
+                  <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-100 mb-3">New Meeting</h3>
+              <p class="text-neutral-400 mb-6">Create a new meeting and invite others</p>
+              <div class="inline-flex items-center gap-2 text-primary-300 font-semibold">
+                <span>Start now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                  <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Join with Code -->
+          <div class="glass-card p-8 hover:border-accent-500/50 transition-all cursor-pointer group" @click="showJoinForm = true">
+            <div class="text-center">
+              <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-accent-600 to-primary-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-white">
+                  <path fill-rule="evenodd" d="M15.75 1.5a6.75 6.75 0 00-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 00-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 00.75-.75v-1.5h1.5A.75.75 0 009 19.5V18h1.5a.75.75 0 00.53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1015.75 1.5zm0 3a.75.75 0 000 1.5A2.25 2.25 0 0118 8.25a.75.75 0 001.5 0 3.75 3.75 0 00-3.75-3.75z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-100 mb-3">Enter a Code</h3>
+              <p class="text-neutral-400 mb-6">Join an existing meeting with a code</p>
+              <div class="inline-flex items-center gap-2 text-accent-300 font-semibold">
+                <span>Join meeting</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                  <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Info -->
+        <div class="mt-12 glass-card p-6 max-w-3xl mx-auto">
+          <h3 class="text-lg font-semibold text-neutral-200 mb-4 text-center">What you get</h3>
+          <div class="grid md:grid-cols-3 gap-4 text-sm text-neutral-400">
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-neutral-200 mb-1">Instant Start</div>
+                <div>No waiting, no approval needed</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-neutral-200 mb-1">HD Quality</div>
+                <div>Video/audio up to 1080p</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary-400 shrink-0 mt-0.5">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-neutral-200 mb-1">No Sign-up</div>
+                <div>Start in seconds, encrypted</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Start Form -->
-      <div v-if="!started" class="glass-card p-4 md:p-8 max-w-2xl mx-auto">
-        <h2 class="text-xl md:text-2xl font-semibold text-neutral-100 mb-4 md:mb-6">Join Video Call</h2>
-        <form @submit.prevent="startCall" class="space-y-4">
+      <!-- Join Form -->
+      <div v-if="!started && showJoinForm" class="glass-card p-4 md:p-8 max-w-2xl mx-auto">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-100">Join Video Call</h2>
+          <button @click="goBack" class="text-neutral-400 hover:text-neutral-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+              <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/>
+            </svg>
+          </button>
+        </div>
+        
+        <form @submit.prevent="joinCall" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-neutral-300 mb-2">
               Your Name
@@ -33,16 +115,17 @@
           
           <div>
             <label class="block text-sm font-medium text-neutral-300 mb-2">
-              Room Name (Optional)
+              Meeting Code
             </label>
             <input 
               v-model="room" 
               type="text"
-              placeholder="Leave empty for random room" 
-              class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
+              placeholder="abc-def-ghi" 
+              required
+              class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all uppercase tracking-wider"
             />
             <p class="text-xs text-neutral-500 mt-1">
-              Share the room name with others to join the same call
+              Enter the meeting code shared with you
             </p>
           </div>
 
@@ -65,64 +148,15 @@
             class="w-full modern-button justify-center gap-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-              <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z" />
+              <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z"/>
             </svg>
-            <span class="gradient-text font-semibold">Start Video Call</span>
+            <span class="gradient-text font-semibold">Join Now</span>
           </button>
         </form>
-
-        <!-- Features -->
-        <div class="mt-8 pt-8 border-t border-neutral-700">
-          <h3 class="text-lg font-semibold text-neutral-200 mb-4">Features</h3>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Host/Participant roles (first = host 👑)
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              HD video and audio quality
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Screen sharing capability
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Built-in chat messaging
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Multilingual support (EN, FA, AR)
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              No registration required
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-primary-400">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              End-to-end encrypted
-            </li>
-          </ul>
-        </div>
       </div>
 
       <!-- Video Call Container -->
-      <div v-else class="space-y-4 md:space-y-6">
+      <div v-if="started" class="space-y-4 md:space-y-6">
         <!-- Mobile-friendly header -->
         <div class="glass-card p-3 md:p-4">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
@@ -133,15 +167,15 @@
                 <p class="text-base md:text-lg font-semibold text-neutral-100">{{ name }}</p>
               </div>
               <div class="hidden sm:block border-l border-neutral-700 pl-6">
-                <p class="text-xs md:text-sm text-neutral-400">Room</p>
-                <p class="text-base md:text-lg font-semibold text-primary-300">{{ room || 'Random Room' }}</p>
+                <p class="text-xs md:text-sm text-neutral-400">Meeting Code</p>
+                <p class="text-base md:text-lg font-semibold text-primary-300 font-mono uppercase">{{ room }}</p>
               </div>
             </div>
             
             <!-- Room info for mobile -->
             <div class="sm:hidden text-center border-t border-neutral-700 pt-3">
-              <p class="text-xs text-neutral-400">Room</p>
-              <p class="text-sm font-semibold text-primary-300">{{ room || 'Random Room' }}</p>
+              <p class="text-xs text-neutral-400">Meeting Code</p>
+              <p class="text-sm font-semibold text-primary-300 font-mono uppercase">{{ room }}</p>
             </div>
             
             <!-- End call button -->
@@ -189,18 +223,45 @@ const name = ref('Melina')
 const room = ref('')
 const selectedLang = ref('en')
 const started = ref(false)
+const showJoinForm = ref(false)
 
-function startCall() {
-  if (name.value.trim()) {
+
+function generateMeetingCode() {
+  // generate a random code with timestamp to ensure uniqueness
+  const timestamp = Date.now().toString(36).slice(-4)
+  const randomString = () => Math.random().toString(36).substring(2, 4)
+  return `${randomString()}${timestamp}${randomString()}`
+}
+
+function createNewMeeting() {
+  // generate random meeting code (always unique and unlocked)
+  room.value = generateMeetingCode()
+  // prompt for name if not set
+  if (!name.value || name.value === 'Melina') {
+    const userName = prompt('Enter your name:', 'Melina')
+    if (userName) {
+      name.value = userName
+    }
+  }
+  started.value = true
+}
+
+function joinCall() {
+  if (name.value.trim() && room.value.trim()) {
     started.value = true
   }
 }
 
+function goBack() {
+  showJoinForm.value = false
+  room.value = ''
+}
+
 function endCall() {
   started.value = false
-  // Reset to default
+  showJoinForm.value = false
+  // Reset
   name.value = 'Melina'
   room.value = ''
 }
 </script>
-
