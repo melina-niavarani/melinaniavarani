@@ -4,7 +4,7 @@
     class="w-full py-6 md:py-12"
     :aria-label="t('experience.ariaLabel')"
   >
-    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+    <div class="max-w-full mx-auto px-6 md:px-12 lg:px-24">
       <div class="mb-12 text-center space-y-4">
         <h2 class="text-5xl md:text-6xl font-black tracking-tight gradient-text animate-fade-in">
           {{ t('experience.title') }}

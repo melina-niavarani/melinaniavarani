@@ -1,6 +1,6 @@
 <template>
-  <footer class="max-w-2xl pb-16 text-sm sm:pb-0 animate-fade-in">
-    <p class="text-neutral-400 leading-relaxed">
+  <footer class="w-full pb-16 text-sm sm:pb-0 animate-fade-in">
+    <p class="text-neutral-400 leading-relaxed text-center max-w-full">
       {{ t('footer.builtBy') }} 
       <span class="font-semibold text-neutral-300 bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
         Melina Niavarani

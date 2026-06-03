@@ -1,6 +1,6 @@
 <template >
   <div class="min-h-screen">
-    <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div class="mx-auto min-h-screen max-w-full px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <section class="lg:flex lg:gap-8 lg:justify-between">
         <header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
           <div :class="['flex', locale === 'fa' ? 'justify-end' : 'justify-start', 'mb-8 lg:mb-6']">

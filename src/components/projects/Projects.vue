@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="w-full py-6 md:py-12" :aria-label="t('projects.ariaLabel')">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+    <div class="max-w-full mx-auto px-6 md:px-12 lg:px-24">
       <div class="mb-12 text-center space-y-4">
         <h2 class="text-5xl md:text-6xl font-black tracking-tight gradient-text animate-fade-in">
           {{ t('projects.title') }}
@@ -27,7 +27,7 @@
                 >
                   <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                   <span class="gradient-text">{{ item.title }}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1 rtl:-scale-x-100 rtl:ms-0 rtl:me-2 rtl:group-hover/link:-translate-x-1" aria-hidden="true">
                     <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
                   </svg>
                 </router-link>
@@ -41,7 +41,7 @@
                 >
                   <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                   <span class="gradient-text">{{ item.title }}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1 rtl:-scale-x-100 rtl:ms-0 rtl:me-2 rtl:group-hover/link:-translate-x-1" aria-hidden="true">
                     <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
                   </svg>
                 </a>
