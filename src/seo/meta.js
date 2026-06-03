@@ -1,10 +1,4 @@
-import {
-  DEFAULT_DESCRIPTION,
-  DEFAULT_OG_IMAGE,
-  DEFAULT_TITLE,
-  SITE_NAME,
-  SITE_URL,
-} from './site'
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from './site'
 
 function upsertMeta(selector, attributes) {
   let el = document.head.querySelector(selector)
@@ -17,24 +11,44 @@ function upsertMeta(selector, attributes) {
   })
 }
 
-function upsertLink(rel, href) {
-  let el = document.head.querySelector(`link[rel="${rel}"]`)
+function upsertLink(rel, href, hreflang) {
+  const selector = hreflang
+    ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+    : `link[rel="${rel}"]:not([hreflang])`
+  let el = document.head.querySelector(selector)
   if (!el) {
     el = document.createElement('link')
     el.setAttribute('rel', rel)
+    if (hreflang) el.setAttribute('hreflang', hreflang)
     document.head.appendChild(el)
   }
   el.setAttribute('href', href)
 }
 
+function stripFaPrefix(path) {
+  if (path === '/fa') return '/'
+  if (path.startsWith('/fa/')) return path.slice(3) || '/'
+  return path
+}
+
+function setHreflangAlternates(path) {
+  const enPath = stripFaPrefix(path)
+  const faPath = enPath === '/' ? '/fa' : `/fa${enPath}`
+
+  upsertLink('alternate', `${SITE_URL}${enPath}`, 'en')
+  upsertLink('alternate', `${SITE_URL}${faPath}`, 'fa')
+  upsertLink('alternate', `${SITE_URL}${enPath}`, 'x-default')
+}
+
 export function setPageMeta({
-  title = DEFAULT_TITLE,
-  description = DEFAULT_DESCRIPTION,
+  title,
+  description,
   path = '/',
   image = DEFAULT_OG_IMAGE,
+  locale = 'en',
   noindex = false,
 }) {
-  const url = path === '/' ? SITE_URL : `${SITE_URL}${path}`
+  const url = `${SITE_URL}${path === '/' ? '' : path}`
 
   document.title = title
 
@@ -50,6 +64,10 @@ export function setPageMeta({
     property: 'og:site_name',
     content: SITE_NAME,
   })
+  upsertMeta('meta[property="og:locale"]', {
+    property: 'og:locale',
+    content: locale === 'fa' ? 'fa_IR' : 'en_US',
+  })
   upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: title })
   upsertMeta('meta[name="twitter:description"]', {
     name: 'twitter:description',
@@ -58,6 +76,7 @@ export function setPageMeta({
   upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: image })
 
   upsertLink('canonical', url)
+  setHreflangAlternates(path)
 
   const robots = noindex ? 'noindex, nofollow' : 'index, follow'
   upsertMeta('meta[name="robots"]', { name: 'robots', content: robots })

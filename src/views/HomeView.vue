@@ -3,6 +3,9 @@
     <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <section class="lg:flex lg:gap-8 lg:justify-between">
         <header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+          <div :class="['flex', locale === 'fa' ? 'justify-end' : 'justify-start', 'mb-8 lg:mb-6']">
+            <LanguageSwitcher />
+          </div>
           <introduction/>
           <navList/>
           <socialMediaList/>
@@ -77,7 +80,9 @@
   </div>
 </template>
 <script>
+  import { useI18n } from 'vue-i18n'
   import introduction from '@/components/header/Introduction.vue'
+  import LanguageSwitcher from '@/components/header/LanguageSwitcher.vue'
   import socialMediaList from '@/components/header/SocialMedia.vue'
   import navList from '@/components/header/NavList.vue'
   import about from '@/components/about/About.vue'
@@ -86,8 +91,13 @@
   import Footer from '@/components/footer/Footer.vue'
 
   export default {
+    setup() {
+      const { locale } = useI18n()
+      return { locale }
+    },
     components: {
       introduction,
+      LanguageSwitcher,
       socialMediaList,
       navList,
       about,

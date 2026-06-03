@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://melinaniavarani.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://melinaniavarani.com/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://melinaniavarani.com/fa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://melinaniavarani.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://melinaniavarani.com/fa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://melinaniavarani.com/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://melinaniavarani.com/fa"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://melinaniavarani.com/archive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://melinaniavarani.com/archive"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://melinaniavarani.com/fa/archive"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://melinaniavarani.com/fa/archive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://melinaniavarani.com/archive"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://melinaniavarani.com/fa/archive"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

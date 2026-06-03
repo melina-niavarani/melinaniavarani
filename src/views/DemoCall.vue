@@ -187,15 +187,16 @@
       </div>
 
       <!-- Back to Portfolio -->
-      <div class="mt-12 text-center">
-        <router-link 
-          to="/"
+      <div class="mt-12 flex flex-col items-center gap-6">
+        <LanguageSwitcher />
+        <router-link
+          :to="localePath('/')"
           class="inline-flex items-center gap-2 text-primary-300 hover:text-primary-400 transition-colors group"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transition-transform group-hover:-translate-x-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transition-transform group-hover:-translate-x-1 rtl:group-hover:translate-x-1 rtl:-scale-x-100">
             <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd" />
           </svg>
-          Back to Portfolio
+          {{ t('demoPage.back') }}
         </router-link>
       </div>
     </div>
@@ -204,7 +205,13 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import VideoCall from '@/components/VideoCall.vue'
+import LanguageSwitcher from '@/components/header/LanguageSwitcher.vue'
+import { useLocalePath } from '@/composables/useLocalePath'
+
+const { t } = useI18n()
+const { localePath } = useLocalePath()
 
 const name = ref('Melina')
 const room = ref('')

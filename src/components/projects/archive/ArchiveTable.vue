@@ -3,11 +3,11 @@
         <table id="content" class="w-full border-collapse text-left">
             <thead class="sticky top-0 z-10 glass-card">
                 <tr>
-                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-24">Year</th>
-                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-48">Project</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-32">Made at</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-64">Built with</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 sm:table-cell w-80">Link</th>
+                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-24">{{ t('archive.table.year') }}</th>
+                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-48">{{ t('archive.table.project') }}</th>
+                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-32">{{ t('archive.table.madeAt') }}</th>
+                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-64">{{ t('archive.table.builtWith') }}</th>
+                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 sm:table-cell w-80">{{ t('archive.table.link') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +32,7 @@
                         </div>
                     </td>
                     <td class="hidden py-6 px-6 align-top text-sm lg:table-cell">
-                        <div class="translate-y-px whitespace-nowrap text-neutral-400">Personal</div>
+                        <div class="translate-y-px whitespace-nowrap text-neutral-400">{{ t('archive.table.personal') }}</div>
                     </td>
                     <td class="hidden py-6 px-6 align-top lg:table-cell">
                         <ul class="flex -translate-y-1.5 flex-wrap gap-2">
@@ -413,3 +413,9 @@
         </table>
     </div>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

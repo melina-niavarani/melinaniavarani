@@ -50,6 +50,7 @@ export default {
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'fa': ['Vazirmatn', 'Inter', 'system-ui', 'sans-serif'],
         'display': ['Cal Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
