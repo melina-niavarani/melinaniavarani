@@ -1,11 +1,11 @@
 <template>
   <section
     id="experience"
-    class="w-full py-12 md:py-20"
+    class="w-full py-6 md:py-12"
     :aria-label="t('experience.ariaLabel')"
   >
     <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-      <div class="mb-16 text-center space-y-4">
+      <div class="mb-12 text-center space-y-4">
         <h2 class="text-5xl md:text-6xl font-black tracking-tight gradient-text animate-fade-in">
           {{ t('experience.title') }}
         </h2>
@@ -14,7 +14,7 @@
         </p>
       </div>
 
-      <div class="space-y-8">
+      <div class="space-y-6">
         <div
           v-for="(item, index) in experienceItems"
           :key="index"

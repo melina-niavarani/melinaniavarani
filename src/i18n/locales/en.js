@@ -1,9 +1,9 @@
 export default {
   meta: {
     home: {
-      title: 'Melina Niavarani | Frontend Developer & SEO Specialist',
+      title: 'Melina Niavarani | Frontend Developer & Digital Marketing Specialist',
       description:
-        'Portfolio of Melina Niavarani — frontend developer and technical SEO specialist. Next.js, Vue, React, and B2B digital growth for oil, bitumen, and industrial markets.',
+        'Portfolio of Melina Niavarani — frontend developer and Digital Marketing Specialist. Next.js, Vue, React, and B2B digital growth for oil, bitumen, and industrial markets.',
     },
     archive: {
       title: 'Project Archive | Melina Niavarani',
