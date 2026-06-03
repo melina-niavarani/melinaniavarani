@@ -1,5 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { setPageMeta } from '../seo/meta'
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SITE_NAME,
+} from '../seo/site'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,27 +13,53 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: DEFAULT_TITLE,
+        description: DEFAULT_DESCRIPTION,
+      },
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: `About | ${SITE_NAME}`,
+        description: DEFAULT_DESCRIPTION,
+        noindex: true,
+      },
     },
     {
       path: '/archive',
       name: 'projects',
-      component: () => import('../views/Archive.vue')
+      component: () => import('../views/Archive.vue'),
+      meta: {
+        title: `Project Archive | ${SITE_NAME}`,
+        description:
+          'Full project archive by Melina Niavarani — web apps, demos, and client work built with Vue, React, and modern frontend tooling.',
+      },
     },
     {
       path: '/demo/call',
       name: 'video-call-demo',
-      component: () => import('../views/DemoCall.vue')
-    }
-  ]
+      component: () => import('../views/DemoCall.vue'),
+      meta: {
+        title: `Video Call Demo | ${SITE_NAME}`,
+        description:
+          'Live video call demo powered by Jitsi Meet — create or join meetings in the browser.',
+        noindex: true,
+      },
+    },
+  ],
+})
+
+router.afterEach((to) => {
+  setPageMeta({
+    title: to.meta.title ?? DEFAULT_TITLE,
+    description: to.meta.description ?? DEFAULT_DESCRIPTION,
+    path: to.path,
+    noindex: Boolean(to.meta.noindex),
+  })
 })
 
 export default router
