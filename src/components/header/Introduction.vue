@@ -1,17 +1,19 @@
 <template>
-  <div class="space-y-4 animate-fade-in">
-    <h1 class="text-5xl font-bold tracking-tight text-neutral-100 sm:text-6xl lg:text-7xl">
-      <span class="gradient-text text-glow">{{ t('intro.nameFirst') }}</span>
-      <br>
-      <span class="text-neutral-200">{{ t('intro.nameLast') }}</span>
-    </h1>
+  <div class="space-y-6 animate-fade-in">
+    <div class="space-y-4">
+      <h1 class="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-neutral-50 leading-tight">
+        <span class="gradient-text text-glow block animate-slide-up" style="animation-delay: 0.1s;">{{ t('intro.nameFirst') }}</span>
+        <span class="bg-gradient-to-r from-neutral-100 via-neutral-50 to-neutral-100 bg-clip-text text-transparent block animate-slide-up" style="animation-delay: 0.2s;">{{ t('intro.nameLast') }}</span>
+      </h1>
 
-    <h2 class="text-xl font-semibold tracking-tight text-neutral-300 sm:text-2xl">
-      <span class="gradient-text">{{ t('intro.role1') }}</span> ·
-      <span class="gradient-text">{{ t('intro.role2') }}</span>
-    </h2>
+      <h2 class="text-xl md:text-2xl font-bold tracking-wide text-neutral-200 animate-slide-up" style="animation-delay: 0.3s;">
+        <span class="gradient-text">{{ t('intro.role1') }}</span>
+        <span class="mx-2 text-primary-400">·</span>
+        <span class="gradient-text">{{ t('intro.role2') }}</span>
+      </h2>
+    </div>
 
-    <p class="max-w-lg leading-relaxed text-neutral-300 text-lg">
+    <p class="max-w-2xl leading-relaxed text-neutral-300 text-lg md:text-xl animate-slide-up" style="animation-delay: 0.4s;">
       {{ t('intro.bio', {
         stack: t('intro.stack'),
         seo: t('intro.seo'),
@@ -19,14 +21,17 @@
       }) }}
     </p>
 
-    <div class="flex flex-wrap items-center gap-3 mt-8">
-      <div class="frosted-glass px-4 py-2 text-sm font-medium text-primary-300">
+    <div class="flex flex-wrap items-center gap-3 mt-10 animate-slide-up" style="animation-delay: 0.5s;">
+      <div class="modern-badge">
+        <span class="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
         {{ t('intro.badgeAvailable') }}
       </div>
-      <div class="frosted-glass px-4 py-2 text-sm font-medium text-accent-300">
+      <div class="modern-badge">
+        <span class="text-xs font-medium">🌍</span>
         {{ t('intro.badgeTimezone') }}
       </div>
-      <div class="frosted-glass px-4 py-2 text-sm font-medium text-primary-300">
+      <div class="modern-badge">
+        <span class="text-xs font-medium">💬</span>
         {{ t('intro.badgeLanguages') }}
       </div>
     </div>

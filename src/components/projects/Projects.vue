@@ -1,11 +1,11 @@
 <template>
-  <section id="projects" class="w-full" :aria-label="t('projects.ariaLabel')">
+  <section id="projects" class="w-full py-12 md:py-20" :aria-label="t('projects.ariaLabel')">
     <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-      <div class="mb-12 text-center">
-        <h2 class="text-4xl font-bold tracking-tight gradient-text sm:text-5xl lg:text-6xl">
+      <div class="mb-16 text-center space-y-4">
+        <h2 class="text-5xl md:text-6xl font-black tracking-tight gradient-text animate-fade-in">
           {{ t('projects.title') }}
         </h2>
-        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+        <p class="text-lg text-neutral-300 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s;">
           {{ t('projects.subtitle') }}
         </p>
       </div>
@@ -13,11 +13,12 @@
         <div
           v-for="(item, index) in projectItems"
           :key="index"
-          class="glass-card p-8 card-hover animate-fade-in"
+          class="glass-card p-8 md:p-10 card-hover animate-fade-in"
+          :style="{ animationDelay: `${0.1 + index * 0.1}s` }"
         >
-          <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-            <div class="space-y-4">
-              <h3 class="text-2xl font-bold">
+          <div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            <div class="space-y-6">
+              <h3 class="text-3xl md:text-4xl font-bold">
                 <router-link
                   v-if="item.internal"
                   class="group/link inline-flex items-baseline font-bold leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 transition-colors duration-200"
@@ -26,7 +27,9 @@
                 >
                   <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                   <span class="gradient-text">{{ item.title }}</span>
-                  <ExternalLinkIcon />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                  </svg>
                 </router-link>
                 <a
                   v-else
@@ -38,20 +41,22 @@
                 >
                   <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                   <span class="gradient-text">{{ item.title }}</span>
-                  <ExternalLinkIcon />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ms-2 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                  </svg>
                 </a>
               </h3>
-              <p class="text-neutral-300 leading-relaxed">{{ item.description }}</p>
-              <div class="flex flex-wrap gap-2" :aria-label="t('projects.techAria')">
+              <p class="text-neutral-300 leading-relaxed text-lg">{{ item.description }}</p>
+              <div class="flex flex-wrap gap-2 pt-2" :aria-label="t('projects.techAria')">
                 <span
                   v-for="(tag, tagIndex) in item.tags"
                   :key="tagIndex"
-                  class="glass-card px-3 py-1 text-xs font-medium"
+                  class="tech-tag px-4 py-2 text-sm font-medium"
                   :class="tagIndex % 2 === 0 ? 'text-primary-300' : 'text-accent-300'"
                 >{{ tag }}</span>
               </div>
             </div>
-            <div class="project-image-container">
+            <div class="project-image-container hidden lg:flex">
               <img
                 :src="projectImages[index]"
                 :alt="`${item.title} Screenshot`"
@@ -62,9 +67,9 @@
           </div>
         </div>
       </div>
-      <div class="mt-12 text-center">
+      <div class="mt-16 text-center">
         <router-link
-          class="modern-button inline-flex items-center gap-2 group"
+          class="modern-button inline-flex items-center gap-2 group animate-slide-up"
           :aria-label="t('projects.viewArchiveAria')"
           :to="localePath('/archive')"
         >

@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+    class="mb-20 scroll-mt-16 md:mb-32 lg:mb-48 lg:scroll-mt-24"
     :aria-label="t('about.ariaLabel')"
   >
     <div
@@ -12,22 +12,22 @@
       </h2>
     </div>
 
-    <div class="glass-card p-8 space-y-6 animate-fade-in">
-      <div class="space-y-4">
-        <p class="text-lg leading-relaxed text-neutral-200">{{ t('about.p1') }}</p>
-        <p class="text-lg leading-relaxed text-neutral-200">{{ t('about.p2') }}</p>
-        <p class="text-lg leading-relaxed text-neutral-200">{{ t('about.p3') }}</p>
+    <div class="glass-card p-10 md:p-12 space-y-8 animate-fade-in">
+      <div class="space-y-6">
+        <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.1s;">{{ t('about.p1') }}</p>
+        <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.2s;">{{ t('about.p2') }}</p>
+        <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.3s;">{{ t('about.p3') }}</p>
       </div>
 
-      <div class="glass-card p-6 gradient-border">
-        <p class="mb-4 text-lg font-semibold gradient-text">{{ t('about.toolsTitle') }}</p>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="glass-card p-8 gradient-border animate-slide-up" style="animation-delay: 0.4s;">
+        <p class="mb-6 text-lg font-semibold gradient-text">{{ t('about.toolsTitle') }}</p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <li
             v-for="(tool, index) in tm('about.tools')"
             :key="index"
-            class="flex items-center text-sm text-neutral-300 hover:text-primary-300 transition-colors duration-200"
+            class="flex items-center text-base text-neutral-300 hover:text-primary-300 transition-all duration-200 group hover:translate-x-1"
           >
-            <span class="w-2 h-2 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full ms-3 me-3 flex-shrink-0"></span>
+            <span class="w-2.5 h-2.5 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full ms-3 me-3 flex-shrink-0 group-hover:scale-125 transition-transform"></span>
             {{ tool }}
           </li>
         </ul>
