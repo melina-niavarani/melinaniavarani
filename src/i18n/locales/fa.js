@@ -204,6 +204,7 @@ export default {
   footer: {
     builtBy: 'ساخته‌شده توسط',
     developedWith: 'توسعه‌یافته با',
+    developername: 'ملینا نیاورانی',
     and: 'و',
     rights: 'تمامی حقوق محفوظ است.',
   },

@@ -205,6 +205,7 @@ export default {
   footer: {
     builtBy: 'Built by',
     developedWith: 'Developed with',
+    developername: 'Melina Niavarani',
     and: 'and',
     rights: 'All rights reserved.',
   },
