@@ -19,12 +19,18 @@
         </a>
         </li>
         <li>
-        <a class="group relative flex items-center justify-center p-3 rounded-xl glass-card glass-card-hover transition-all duration-300 hover:-translate-y-1 hover:scale-110" href="https://twitter.com/melinaniav?s=21&t=sgIBYsMF3mBNarp0zr0Dxg" target="_blank" rel="noreferrer" aria-label="Twitter">
-            <span class="sr-only">Twitter</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 204" fill="currentColor" class="h-5 w-5 text-neutral-300 group-hover:text-primary-300 transition-colors" aria-hidden="true">
-            <path id="white_background" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"></path>
+        <a class="group relative flex items-center justify-center p-3 rounded-xl glass-card glass-card-hover transition-all duration-300 hover:-translate-y-1 hover:scale-110" href="https://x.com/melinaniav?s=11&t=sgIBYsMF3mBNarp0zr0Dxg" target="_blank" rel="noreferrer" aria-label="X">
+          <span class="sr-only">X</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-5 w-5 text-neutral-300 group-hover:text-primary-300 transition-colors"
+                aria-hidden="true"
+            >
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.966 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
             </svg>
-            <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs font-medium text-neutral-300 transition-opacity duration-200 whitespace-nowrap">Twitter</span>
+            <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs font-medium text-neutral-300 transition-opacity duration-200 whitespace-nowrap">X</span>
         </a>
         </li>
         <li>
