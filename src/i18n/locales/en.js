@@ -1,9 +1,9 @@
 export default {
   meta: {
     home: {
-      title: 'Melina Niavarani | Frontend Developer & Digital Marketing Specialist',
+      title: 'Melina Niavarani | Digital Strategist & Frontend Developer',
       description:
-        'Portfolio of Melina Niavarani — frontend developer and Digital Marketing Specialist. Next.js, Vue, React, and B2B digital growth for oil, bitumen, and industrial markets.',
+        'Portfolio of Melina Niavarani — digital strategist, frontend developer, and builder of research-driven digital products. Specialized in Next.js, Vue, React, technical SEO, market intelligence, and B2B growth across industrial and international markets.',
     },
     archive: {
       title: 'Project Archive | Melina Niavarani',
@@ -27,15 +27,15 @@ export default {
     projects: 'Projects',
   },
   intro: {
-    role1: 'Frontend Developer',
-    role2: 'Digital Marketing Specialist',
+    role1: 'Digital Strategist',
+    role2: 'Frontend Developer',
     nameFirst: 'Melina',
     nameLast: 'Niavarani',
     bio:
-      'I craft fast, accessible web applications with {stack}, and drive organic growth through {seo} — with hands-on expertise in {industry}.',
+      'I build research-driven digital products with {stack}, and help B2B brands turn visibility, market insight, and content into measurable growth.',
     stack: 'Next.js, Vue, and React',
-    seo: 'technical SEO & content strategy',
-    industry: 'oil, bitumen, and industrial B2B markets',
+    seo: 'technical SEO, content strategy, and market intelligence',
+    industry: 'industrial and international B2B markets',
     badgeAvailable: 'Available for Projects',
     badgeTimezone: 'GCC Time Zone',
     badgeLanguages: 'English & Persian',
@@ -43,9 +43,9 @@ export default {
   about: {
     ariaLabel: 'About me',
     title: 'About',
-    p1: "Hi, I'm Melina — a Frontend Developer and Digital Marketing/SEO Specialist. I build fast, accessible web applications with Next.js, Vue, and React, and help B2B brands grow through technical SEO and content strategy. I also have domain expertise in the oil, bitumen, and industrial sectors.",
-    p2: "My focus is the intersection of UI performance and SEO — from architecture and schema to multilingual optimization and analytics. I'm available for project-based or part-time contracts, GCC-ready (Dubai/Oman time-zone aligned), and comfortable working in English & Persian.",
-    p3: 'Outside of work, I enjoy walking, spending time with family and friends, playing Piano, and a good match of Tennis.',
+    p1: "Hi, I'm Melina — a Digital Strategist, Frontend Developer, and builder of research-driven digital products.",
+    p2: 'My work sits at the intersection of technology, market intelligence, and business growth. I develop multilingual web platforms with Next.js, Vue, and React, while helping B2B organizations improve visibility, generate opportunities, and make better decisions through technical SEO, content strategy, and market research.',
+    p3: 'Alongside client and corporate projects, I am building AurexInsight — an independent platform focused on trade intelligence, supplier validation, market analysis, and opportunity discovery across industrial and international B2B markets.',
     toolsTitle: 'Here are a few technologies & tools I use regularly:',
     tools: [
       'Next.js / React',
@@ -54,8 +54,8 @@ export default {
       'Node.js / Strapi',
       'Technical SEO / Schema / i18n',
       'GA4 / Plausible / A/B testing',
-      'Enterprise SEO (DNN & legacy systems)',
-      'B2B content for oil/bitumen industry',
+      'Market Intelligence / B2B Research',
+      'Trade Intelligence / Opportunity Discovery',
     ],
   },
   experience: {
@@ -65,6 +65,15 @@ export default {
     viewResume: 'View Full Résumé',
     viewResumeAria: 'View Full Résumé',
     items: [
+      {
+        period: '2026 — Present',
+        category: 'Research Platform',
+        role: 'Founder, Strategist & Developer',
+        company: 'AurexInsight',
+        url: 'https://aurexinsight.com',
+        description: 'Founded, designed, and developed AurexInsight, a market intelligence platform focused on trade opportunities, supplier validation, and B2B market research. Built with Next.js, multilingual architecture, technical SEO, and insight-led content strategy.',
+        tags: ['Next.js', 'Market Intelligence', 'Trade Research', 'Technical SEO', 'B2B Strategy'],
+      },
       {
         period: '2025 — Present',
         category: 'Design & Development',
