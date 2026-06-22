@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen w-full">
-    <a href="#content" class="absolute start-0 top-0 block -translate-x-full rtl:translate-x-full rounded-2xl glass-card px-4 py-3 text-sm font-bold uppercase tracking-widest text-neutral-100 focus-visible:translate-x-0 transition-all duration-300">
+    <a href="#content" class="absolute start-0 top-0 block -translate-x-full rtl:translate-x-full rounded-lg glass-card px-4 py-3 text-sm font-bold uppercase tracking-widest text-neutral-100 focus-visible:translate-x-0 transition-all duration-300">
       {{ t('archive.skip') }}
     </a>
     <div class="w-full px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-24">
@@ -31,7 +31,7 @@
 
         <div class="relative z-10">
           <router-link
-            class="group mb-8 inline-flex items-center glass-card px-6 py-3 rounded-2xl font-semibold leading-tight text-neutral-100 hover:text-primary-300 transition-all duration-500 ease-out card-hover"
+            class="group mb-8 inline-flex items-center glass-card px-6 py-3 rounded-lg font-semibold leading-tight text-neutral-100 hover:text-primary-300 transition-all duration-500 ease-out card-hover"
             :to="localePath('/')"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="me-2 h-5 w-5 rotate-180 rtl:rotate-0 transition-transform group-hover:-translate-x-2 rtl:group-hover:translate-x-2" aria-hidden="true">

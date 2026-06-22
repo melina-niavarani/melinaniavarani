@@ -2,26 +2,18 @@
   <div @mousemove="handleMouseMove" class="relative min-h-screen overflow-hidden">
     <!-- Modern animated background -->
     <div class="fixed inset-0 z-0">
-      <!-- Gradient background -->
-      <div class="absolute inset-0 bg-gradient-to-br from-neutral-950 via-blue-950/40 to-purple-950/40"></div>
-      
-      <!-- Animated gradient orbs with enhanced vibrant colors -->
-      <div class="absolute top-0 -left-4 w-72 h-72 bg-primary-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-80 animate-blob"></div>
-      <div class="absolute top-0 -right-4 w-72 h-72 bg-accent-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-80 animate-blob" style="animation-delay: 2s;"></div>
-      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-primary-400/25 rounded-full mix-blend-multiply filter blur-3xl opacity-75 animate-blob" style="animation-delay: 4s;"></div>
-      
-      <!-- Secondary decorative elements with more visibility -->
-      <div class="absolute top-1/2 -right-20 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-1/4 -left-32 w-80 h-80 bg-cyan-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float" style="animation-delay: 3s;"></div>
-      <div class="absolute top-1/3 right-1/4 w-60 h-60 bg-primary-500/15 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-glow" style="animation-delay: 2.5s;"></div>
+      <div class="absolute inset-0 bg-neutral-950"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(14,165,233,0.12),transparent_32%,rgba(34,197,94,0.08)_68%,transparent)]"></div>
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-300/40 to-transparent"></div>
+      <div class="absolute left-1/2 top-0 h-[520px] w-px -translate-x-1/2 bg-gradient-to-b from-primary-300/25 to-transparent"></div>
       
       <!-- Interactive mouse gradient with enhanced effect -->
       <div class="pointer-events-none fixed inset-0 z-30 transition duration-300"
-           :style="{background: `radial-gradient(900px at ${xPosition}px ${yPosition}px, rgba(59, 130, 246, 0.2), transparent 80%)`}">
+           :style="{background: `radial-gradient(760px at ${xPosition}px ${yPosition}px, rgba(56, 189, 248, 0.1), transparent 72%)`}">
       </div>
       
       <!-- Enhanced grid pattern overlay -->
-      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25"></div>
       
       <!-- Subtle radial gradient overlay for depth -->
       <div class="absolute inset-0 bg-radial-gradient-to-center opacity-20"></div>

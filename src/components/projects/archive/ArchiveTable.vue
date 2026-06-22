@@ -1,421 +1,145 @@
 <template>
-    <div class="w-full overflow-x-auto">
-        <table id="content" class="w-full border-collapse text-left">
-            <thead class="sticky top-0 z-10 glass-card">
-                <tr>
-                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-24">{{ t('archive.table.year') }}</th>
-                    <th class="py-6 px-6 text-sm font-semibold text-neutral-100 w-48">{{ t('archive.table.project') }}</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-32">{{ t('archive.table.madeAt') }}</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 lg:table-cell w-64">{{ t('archive.table.builtWith') }}</th>
-                    <th class="hidden py-6 px-6 text-sm font-semibold text-neutral-100 sm:table-cell w-80">{{ t('archive.table.link') }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                    <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                        <div class="translate-y-px">2023</div>
-                    </td>
-                    <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                        <div>
-                            <div class="block sm:hidden">
-                                <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://melinaniavarani.com" target="_blank" rel="noreferrer" aria-label="Portfolio">
-                                    <span>
-                                        <span class="inline-block">Portfolio
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="hidden sm:block">IAMDB</div>
-                        </div>
-                    </td>
-                    <td class="hidden py-6 px-6 align-top text-sm lg:table-cell">
-                        <div class="translate-y-px whitespace-nowrap text-neutral-400">{{ t('archive.table.personal') }}</div>
-                    </td>
-                    <td class="hidden py-6 px-6 align-top lg:table-cell">
-                        <ul class="flex -translate-y-1.5 flex-wrap gap-2">
-                            <li class="my-1">
-                                <div class="tech-tag vue px-3 py-1 text-xs font-medium">Vue</div>
-                            </li>
-                            <li class="my-1">
-                                <div class="tech-tag tailwind px-3 py-1 text-xs font-medium">Tailwindcss</div>
-                            </li>
-                            <li class="my-1">
-                                <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                            </li>
-                        </ul>
-                    </td>
-                    <td class="hidden py-6 px-6 align-top sm:table-cell">
-                        <ul class="translate-y-1">
-                            <li class="mb-1 flex items-center">
-                                <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://iamdb-by-m.netlify.app/" target="_blank" rel="noreferrer" aria-label="IAMDB App">
-                                    <span>
-                                        <span class="inline-block truncate max-w-[300px]">https://iamdb-by-m.netlify.app/
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2023</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://etalon.netlify.app" target="_blank" rel="noreferrer" aria-label="Pratt">
-                                <span>
-                                    <span class="inline-block">Etalon
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Etalon</div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag vue px-3 py-1 text-xs font-medium">Vue</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag pinia px-3 py-1 text-xs font-medium">Pinia</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag bootstrap px-3 py-1 text-xs font-medium">Bootstrap</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://etalon.netlify.app" target="_blank" rel="noreferrer" aria-label="pratt.edu">
-                                <span>
-                                    <span class="inline-block">https://etalon.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2023</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://rock-paper-scissors-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="Pratt">
-                                <span>
-                                    <span class="inline-block">Rock Paper Scissors
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Rock Paper Scissors</div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag vue px-3 py-1 text-xs font-medium">Vue</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://rock-paper-scissors-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="pratt.edu">
-                                <span>
-                                    <span class="inline-block">https://rock-paper-scissors-by-m.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2023</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://weather-by-me.netlify.app/" target="_blank" rel="noreferrer" aria-label="Threadable">
-                                <span>
-                                    <span class="inline-block">Online Weather App
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Online Weather App</div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag vue px-3 py-1 text-xs font-medium">Option Api</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag bootstrap px-3 py-1 text-xs font-medium">Bootstrap</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://weather-by-me.netlify.app/" target="_blank" rel="noreferrer" aria-label="apps.apple.com">
-                                <span> 
-                                    <span class="inline-block">https://weather-by-me.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2022</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://flipacoin-by-me.netlify.app" target="_blank" rel="noreferrer" aria-label="Everytown Gun Law Rankings">
-                                <span>Flip A Coin
-                                    <span class="inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Flip A Coin</div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://flipacoin-by-me.netlify.app" target="_blank" rel="noreferrer" aria-label="everytownresearch.org/rankings">
-                                <span> 
-                                    <span class="inline-block">https://flipacoin-by-me.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2022</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://tictactoe-vue-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="Koala Health">
-                                <span> Tic Tac Toe
-                                    <span class="inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Tic Tac Toe </div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag vue px-3 py-1 text-xs font-medium">Vue</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://tictactoe-vue-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="everytownresearch.org/rankings">
-                                <span> 
-                                    <span class="inline-block">https://tictactoe-vue-by-m.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2022</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://pomodoro-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="Koala Health">
-                                <span> Pomodoro
-                                    <span class="inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Pomodoro </div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://pomodoro-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="everytownresearch.org/rankings">
-                                <span> 
-                                    <span class="inline-block">https://pomodoro-by-m.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="border-b border-white/10 last:border-none hover:bg-white/5 transition-all duration-300 ease-out">
-                <td class="py-6 px-6 align-top text-sm text-neutral-300">
-                    <div class="translate-y-px">2022</div>
-                </td>
-                <td class="py-6 px-6 align-top font-semibold leading-snug text-neutral-100">
-                    <div>
-                        <div class="block sm:hidden">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-primary-300 focus-visible:text-primary-300 sm:hidden group/link text-base transition-colors duration-300" href="https://todolist-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="Koala Health">
-                                <span> Todo List
-                                    <span class="inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="hidden sm:block">Todo List </div>
-                    </div>
-                </td>
-                <td class="hidden py-6 px-6 align-top text-sm text-neutral-400 lg:table-cell">
-                    <div class="translate-y-px whitespace-nowrap"></div>
-                </td>
-                <td class="hidden py-6 px-6 align-top lg:table-cell">
-                    <ul class="flex -translate-y-1.5 flex-wrap">
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag vue px-3 py-1 text-xs font-medium">Vue</div>
-                        </li>
-                        <li class="my-1 mr-1.5">
-                            <div class="tech-tag javascript px-3 py-1 text-xs font-medium">JavaScript</div>
-                        </li>
-                    </ul>
-                </td>
-                <td class="hidden py-6 px-6 align-top sm:table-cell">
-                    <ul class="translate-y-1">
-                        <li class="mb-1 flex items-center">
-                            <a class="inline-flex items-baseline font-medium leading-tight text-neutral-300 hover:text-primary-300 focus-visible:text-primary-300 text-sm group/link text-sm transition-colors duration-300" href="https://todolist-by-m.netlify.app" target="_blank" rel="noreferrer" aria-label="everytownresearch.org/rankings">
-                                <span> 
-                                    <span class="inline-block">https://todolist-by-m.netlify.app
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+  <div id="content" class="w-full overflow-hidden rounded-lg border border-white/10 bg-white/[0.035]">
+    <div class="hidden overflow-x-auto lg:block">
+      <table class="w-full border-collapse text-left rtl:text-right">
+        <thead class="bg-white/[0.045]">
+          <tr>
+            <th class="w-24 px-6 py-5 text-sm font-semibold text-neutral-100">
+              {{ t('archive.table.year') }}
+            </th>
+            <th class="w-64 px-6 py-5 text-sm font-semibold text-neutral-100">
+              {{ t('archive.table.project') }}
+            </th>
+            <th class="w-44 px-6 py-5 text-sm font-semibold text-neutral-100">
+              {{ t('archive.table.madeAt') }}
+            </th>
+            <th class="px-6 py-5 text-sm font-semibold text-neutral-100">
+              {{ t('archive.table.builtWith') }}
+            </th>
+            <th class="w-32 px-6 py-5 text-sm font-semibold text-neutral-100">
+              {{ t('archive.table.link') }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="item in archiveItems"
+            :key="`${item.year}-${item.title}`"
+            class="border-t border-white/10 transition-colors duration-300 hover:bg-white/[0.045]"
+          >
+            <td class="px-6 py-5 align-top text-sm font-medium text-neutral-400">
+              {{ item.year }}
+            </td>
+            <td class="px-6 py-5 align-top">
+              <component
+                :is="item.to ? RouterLink : 'a'"
+                v-bind="getLinkProps(item)"
+                class="group/link inline-flex items-center gap-2 text-base font-bold leading-tight text-neutral-100 transition-colors duration-300 hover:text-primary-300 focus-visible:text-primary-300"
+              >
+                {{ item.title }}
+                <ArrowIcon />
+              </component>
+            </td>
+            <td class="px-6 py-5 align-top text-sm text-neutral-400">
+              {{ item.madeAt }}
+            </td>
+            <td class="px-6 py-5 align-top">
+              <ul class="flex flex-wrap gap-2">
+                <li v-for="tag in item.tags" :key="tag">
+                  <span class="tech-tag px-3 py-1.5 text-xs font-semibold text-neutral-300">
+                    {{ tag }}
+                  </span>
+                </li>
+              </ul>
+            </td>
+            <td class="px-6 py-5 align-top">
+              <component
+                :is="item.to ? RouterLink : 'a'"
+                v-bind="getLinkProps(item)"
+                class="text-sm font-semibold text-primary-300 transition-colors duration-300 hover:text-primary-200"
+              >
+                {{ t('archive.table.link') }}
+              </component>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="block lg:hidden">
+      <article
+        v-for="item in archiveItems"
+        :key="`${item.year}-${item.title}-card`"
+        class="border-t border-white/10 p-5 first:border-t-0"
+      >
+        <div class="mb-3 flex items-start justify-between gap-4">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-neutral-500">
+              {{ item.year }} · {{ item.madeAt }}
+            </p>
+            <component
+              :is="item.to ? RouterLink : 'a'"
+              v-bind="getLinkProps(item)"
+              class="mt-2 inline-flex items-center gap-2 text-lg font-black text-neutral-100 transition-colors duration-300 hover:text-primary-300"
+            >
+              {{ item.title }}
+              <ArrowIcon />
+            </component>
+          </div>
+        </div>
+        <ul class="flex flex-wrap gap-2">
+          <li v-for="tag in item.tags" :key="tag">
+            <span class="tech-tag px-3 py-1.5 text-xs font-semibold text-neutral-300">
+              {{ tag }}
+            </span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
 </template>
 
 <script setup>
+import { computed, h } from 'vue'
+import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
+const { localePath } = useLocalePath()
+
+const archiveItems = computed(() => tm('archive.items'))
+
+function getLinkProps(item) {
+  if (item.to) {
+    return { to: localePath(item.to), 'aria-label': item.title }
+  }
+
+  return {
+    href: item.href,
+    target: '_blank',
+    rel: 'noreferrer',
+    'aria-label': item.title,
+  }
+}
+
+const ArrowIcon = () =>
+  h(
+    'svg',
+    {
+      xmlns: 'http://www.w3.org/2000/svg',
+      viewBox: '0 0 20 20',
+      fill: 'currentColor',
+      class:
+        'h-4 w-4 shrink-0 text-primary-300 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover/link:-translate-x-0.5 rtl:group-hover/link:translate-x-0',
+      'aria-hidden': 'true',
+    },
+    [
+      h('path', {
+        'fill-rule': 'evenodd',
+        d: 'M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z',
+        'clip-rule': 'evenodd',
+      }),
+    ],
+  )
 </script>

@@ -19,7 +19,7 @@
         <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.3s;">{{ t('about.p3') }}</p>
       </div>
 
-      <div class="glass-card p-8 gradient-border animate-slide-up" style="animation-delay: 0.4s;">
+      <div class="tools-panel animate-slide-up" style="animation-delay: 0.4s;">
         <p class="mb-6 text-lg font-semibold gradient-text">{{ t('about.toolsTitle') }}</p>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <li

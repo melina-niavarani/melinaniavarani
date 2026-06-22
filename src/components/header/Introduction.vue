@@ -21,17 +21,37 @@
       }) }}
     </p>
 
-    <div class="flex flex-wrap items-center gap-3 mt-10 animate-slide-up" style="animation-delay: 0.5s;">
+    <div class="flex flex-col gap-3 pt-2 sm:flex-row animate-slide-up" style="animation-delay: 0.5s;">
+      <a class="modern-button justify-center" href="#contact">
+        {{ t('intro.ctaPrimary') }}
+      </a>
+      <a class="secondary-button justify-center" href="#projects">
+        {{ t('intro.ctaSecondary') }}
+      </a>
+    </div>
+
+    <dl class="grid grid-cols-1 gap-3 pt-4 sm:grid-cols-3 animate-slide-up" style="animation-delay: 0.55s;">
+      <div
+        v-for="stat in tm('intro.stats')"
+        :key="stat.label"
+        class="rounded-lg border border-white/10 bg-white/[0.04] p-4"
+      >
+        <dt class="text-2xl font-black text-neutral-50">{{ stat.value }}</dt>
+        <dd class="mt-1 text-xs font-medium leading-5 text-neutral-400">{{ stat.label }}</dd>
+      </div>
+    </dl>
+
+    <div class="flex flex-wrap items-center gap-3 mt-4 animate-slide-up" style="animation-delay: 0.6s;">
       <div class="modern-badge">
-        <span class="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <span class="inline-block h-2 w-2 rounded-full bg-accent-300 shadow-[0_0_14px_rgba(134,239,172,0.38)]"></span>
         {{ t('intro.badgeAvailable') }}
       </div>
       <div class="modern-badge">
-        <span class="text-xs font-medium">🌍</span>
+        <span class="inline-block h-2 w-2 rounded-full bg-primary-200 shadow-[0_0_14px_rgba(125,211,252,0.34)]"></span>
         {{ t('intro.badgeTimezone') }}
       </div>
       <div class="modern-badge">
-        <span class="text-xs font-medium">💬</span>
+        <span class="inline-block h-2 w-2 rounded-full bg-neutral-200/80"></span>
         {{ t('intro.badgeLanguages') }}
       </div>
     </div>
@@ -41,5 +61,5 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 </script>

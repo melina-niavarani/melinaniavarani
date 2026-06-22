@@ -15,6 +15,11 @@
           <about/>
         </main>
       </section>
+
+      <!-- Services Section -->
+      <section class="w-full py-2 lg:py-4">
+        <services/>
+      </section>
       
       <!-- Full-width Experience Section -->
       <section class="w-full py-2 lg:py-4">
@@ -71,6 +76,11 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact CTA -->
+      <section class="w-full">
+        <ContactCTA/>
+      </section>
       
       <!-- Footer -->
       <section class="w-full">
@@ -88,6 +98,8 @@
   import about from '@/components/about/About.vue'
   import projects from '@/components/projects/Projects.vue'
   import experience from '@/components/experience/Experiences.vue'
+  import services from '@/components/services/Services.vue'
+  import ContactCTA from '@/components/contact/ContactCTA.vue'
   import Footer from '@/components/footer/Footer.vue'
 
   export default {
@@ -103,6 +115,8 @@
       about,
       projects,
       experience,
+      services,
+      ContactCTA,
       Footer
     }
   }
