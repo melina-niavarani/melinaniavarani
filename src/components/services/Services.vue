@@ -13,7 +13,7 @@
         </p>
       </div>
 
-      <div class="grid gap-4 lg:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <article
           v-for="(item, index) in serviceItems"
           :key="item.title"
@@ -39,6 +39,18 @@
             </span>
           </div>
         </article>
+      </div>
+
+      <div class="mt-5 grid gap-4 lg:grid-cols-3">
+        <div
+          v-for="item in tm('services.process')"
+          :key="item.title"
+          class="process-step"
+        >
+          <p class="text-xs font-bold uppercase tracking-widest text-primary-300">{{ item.label }}</p>
+          <h3 class="mt-2 text-lg font-black text-neutral-50">{{ item.title }}</h3>
+          <p class="mt-3 text-sm leading-7 text-neutral-300">{{ item.description }}</p>
+        </div>
       </div>
     </div>
   </section>

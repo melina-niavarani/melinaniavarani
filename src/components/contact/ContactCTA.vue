@@ -15,6 +15,15 @@
           <p class="mt-4 text-sm font-medium text-neutral-400">
             {{ t('contact.note') }}
           </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              v-for="item in tm('contact.tags')"
+              :key="item"
+              class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-neutral-300"
+            >
+              {{ item }}
+            </span>
+          </div>
         </div>
 
         <div class="mt-8 flex w-full flex-col gap-3 sm:flex-row lg:mt-0 lg:w-auto lg:min-w-[22rem] lg:flex-col xl:flex-row">
@@ -41,7 +50,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const emailSubject = 'Project inquiry from melinaniavarani.com'
 const emailBody = `Hi Melina,

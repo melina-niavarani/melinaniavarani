@@ -12,11 +12,22 @@
       </h2>
     </div>
 
-    <div class="glass-card p-10 md:p-12 space-y-8 animate-fade-in">
+    <div class="glass-card p-6 md:p-10 lg:p-12 space-y-8 animate-fade-in">
       <div class="space-y-6">
         <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.1s;">{{ t('about.p1') }}</p>
         <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.2s;">{{ t('about.p2') }}</p>
         <p class="text-lg md:text-xl leading-relaxed text-neutral-200 animate-slide-up" style="animation-delay: 0.3s;">{{ t('about.p3') }}</p>
+      </div>
+
+      <div class="grid gap-3 sm:grid-cols-3">
+        <div
+          v-for="signal in tm('about.signals')"
+          :key="signal.value"
+          class="rounded-lg border border-white/10 bg-neutral-950/35 p-4"
+        >
+          <p class="text-2xl font-black text-neutral-50">{{ signal.value }}</p>
+          <p class="mt-1 text-xs font-medium leading-5 text-neutral-400">{{ signal.label }}</p>
+        </div>
       </div>
 
       <div class="tools-panel animate-slide-up" style="animation-delay: 0.4s;">

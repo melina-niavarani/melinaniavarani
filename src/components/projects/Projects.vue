@@ -19,7 +19,7 @@
           class="project-card animate-fade-in"
           :style="{ animationDelay: `${0.1 + index * 0.1}s` }"
         >
-          <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+          <div class="grid gap-8 lg:grid-cols-[1fr_0.92fr] lg:gap-10">
             <div class="space-y-6">
               <div class="flex flex-wrap items-center gap-3 text-sm">
                 <span class="rounded-md bg-primary-300/10 px-3 py-1.5 font-bold text-primary-200">
@@ -70,7 +70,7 @@
               </div>
             </div>
 
-            <div class="project-proof-panel">
+            <div class="project-proof-panel" :class="`project-visual-${(index % 5) + 1}`">
               <div class="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
                   <p class="text-xs font-bold uppercase tracking-widest text-neutral-500">{{ t('projects.scopeLabel') }}</p>
@@ -78,19 +78,31 @@
                 </div>
                 <span class="h-3 w-3 rounded-full bg-accent-300 shadow-[0_0_20px_rgba(134,239,172,0.45)]"></span>
               </div>
-              <div class="space-y-3">
-                <div class="flex items-center justify-between rounded-lg bg-white/[0.04] px-4 py-3">
-                  <span class="text-sm text-neutral-400">{{ t('projects.roleLabel') }}</span>
-                  <span class="text-sm font-bold text-neutral-100">{{ item.role }}</span>
+              <div class="project-browser">
+                <div class="project-browser-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <div class="flex items-center justify-between rounded-lg bg-white/[0.04] px-4 py-3">
-                  <span class="text-sm text-neutral-400">{{ t('projects.focusLabel') }}</span>
-                  <span class="text-sm font-bold text-primary-200">{{ item.category }}</span>
+                <div class="project-browser-body">
+                  <img
+                    class="project-browser-image"
+                    :src="getProjectImage(item.title)"
+                    :alt="item.ariaLabel"
+                    loading="lazy"
+                    decoding="async"
+                  >
                 </div>
-                <div class="rounded-lg border border-white/10 bg-neutral-950/40 p-4">
-                  <div class="mb-3 h-2 w-2/3 rounded-full bg-primary-300/50"></div>
-                  <div class="mb-3 h-2 w-5/6 rounded-full bg-white/15"></div>
-                  <div class="h-2 w-1/2 rounded-full bg-accent-300/40"></div>
+              </div>
+
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-lg bg-white/[0.045] px-4 py-3">
+                  <span class="block text-xs text-neutral-500">{{ t('projects.roleLabel') }}</span>
+                  <span class="mt-1 block text-sm font-bold text-neutral-100">{{ item.role }}</span>
+                </div>
+                <div class="rounded-lg bg-white/[0.045] px-4 py-3">
+                  <span class="block text-xs text-neutral-500">{{ t('projects.focusLabel') }}</span>
+                  <span class="mt-1 block text-sm font-bold text-primary-200">{{ item.category }}</span>
                 </div>
               </div>
             </div>
@@ -117,9 +129,26 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocalePath } from '@/composables/useLocalePath'
+import aurexinsightImage from '@/assets/images/aurexinsight.webp'
+import bitumproImage from '@/assets/images/bitumpro.webp'
+import nfcImage from '@/assets/images/nfc.webp'
+import revivoearthImage from '@/assets/images/revivoearth.webp'
+import videoCallImage from '@/assets/images/videocall.webp'
 
 const { t, tm } = useI18n()
 const { localePath } = useLocalePath()
 
 const projectItems = computed(() => tm('projects.items'))
+
+const projectImages = {
+  AurexInsight: aurexinsightImage,
+  BitumPro: bitumproImage,
+  'Dejpa NFC Business Cards': nfcImage,
+  RevivoEarth: revivoearthImage,
+  'Video Call Demo': videoCallImage,
+}
+
+function getProjectImage(title) {
+  return projectImages[title] ?? bitumproImage
+}
 </script>

@@ -29,6 +29,7 @@ export default {
     contact: 'Start a Project',
   },
   intro: {
+    kicker: '2026 Website Design & Development',
     role1: 'Digital Strategist',
     role2: 'Frontend Developer',
     nameFirst: 'Melina',
@@ -43,6 +44,14 @@ export default {
     badgeAvailable: 'Available for Projects',
     badgeTimezone: 'Remote & International',
     badgeLanguages: 'English & Persian',
+    labLabel: 'Project delivery system',
+    labTitle: 'From strategy and wireframes to UI, frontend, and technical SEO',
+    labStatus: 'Launch-ready',
+    pipeline: [
+      { label: 'UX Strategy', detail: 'Conversion paths, page flow, and user intent.', status: 'Map' },
+      { label: 'Interface System', detail: 'Responsive UI with clear visual hierarchy.', status: 'Design' },
+      { label: 'Launch Stack', detail: 'Frontend, performance, and SEO foundations.', status: 'Build' },
+    ],
     stats: [
       { value: '10+', label: 'Design & development projects' },
       { value: '3', label: 'Core stacks: Next, Vue, React' },
@@ -55,6 +64,11 @@ export default {
     p1: "Hi, I'm Melina — a Digital Strategist, Frontend Developer, and builder of research-driven digital products.",
     p2: 'My work sits at the intersection of technology, market intelligence, and business growth. I develop multilingual web platforms with Next.js, Vue, and React, while helping B2B organizations improve visibility, generate opportunities, and make better decisions through technical SEO, content strategy, and market research.',
     p3: 'Alongside client and corporate projects, I am building AurexInsight — an independent platform focused on trade intelligence, supplier validation, market analysis, and opportunity discovery across industrial and international B2B markets.',
+    signals: [
+      { value: 'UI/UX', label: 'Interface and user journeys built to turn visitors into leads' },
+      { value: 'SEO', label: 'Technical structure, metadata, and content architecture for growth' },
+      { value: 'CMS', label: 'Manageable delivery for content, sales, and operations teams' },
+    ],
     toolsTitle: 'Here are a few technologies & tools I use regularly:',
     tools: [
       'Next.js / React',
@@ -97,6 +111,23 @@ export default {
         description:
           'Page structure, metadata, schema, multilingual routes, and performance-minded frontend foundations for stronger search visibility.',
         tags: ['Technical SEO', 'Schema', 'i18n', 'Performance'],
+      },
+    ],
+    process: [
+      {
+        label: '01 / Discover',
+        title: 'Clarify goals, audience, and conversion paths',
+        description: 'Before design, the brand message, key pages, CTAs, and user decision flow are mapped.',
+      },
+      {
+        label: '02 / Design',
+        title: 'Modern, trustworthy, responsive UI',
+        description: 'The visual system is shaped around readability, fast scanning, brand credibility, and mobile UX.',
+      },
+      {
+        label: '03 / Launch',
+        title: 'Development, technical SEO, and handoff',
+        description: 'Clean implementation, performance tuning, multilingual routes, and CMS-ready structure are prepared.',
       },
     ],
   },
@@ -202,15 +233,15 @@ export default {
         tags: ['Web Design', 'Frontend', 'Multilingual', 'Technical SEO', 'B2B'],
       },
       {
-        title: 'Rahrosell',
-        ariaLabel: 'View Rahrosell project',
-        href: 'https://rahrosell.com',
-        category: 'Online Bookstore',
-        role: 'Full-stack Development',
+        title: 'AurexInsight',
+        ariaLabel: 'View AurexInsight project',
+        href: 'https://aurexinsight.com',
+        category: 'B2B Intelligence Platform',
+        role: 'Founder, Designer & Developer',
         description:
-          'Designed and developed an online bookstore with a Next.js and Tailwind frontend plus a Strapi backend for content, inventory, admin workflows, and custom roles.',
-        outcome: 'Outcome: an SEO-friendly commerce platform with admin management and a scalable shopping experience.',
-        tags: ['Next.js', 'Strapi', 'Tailwind', 'E-commerce', 'Admin Panel'],
+          'Founded, designed, and developed a multilingual market intelligence platform for supplier validation, trade opportunity discovery, and B2B research across industrial markets.',
+        outcome: 'Outcome: a research-driven platform with strong positioning, multilingual architecture, technical SEO foundations, and a scalable content experience.',
+        tags: ['Next.js', 'Market Intelligence', 'Technical SEO', 'Multilingual', 'B2B'],
       },
       {
         title: 'Dejpa NFC Business Cards',
@@ -257,6 +288,7 @@ export default {
     primary: 'Message me on LinkedIn',
     secondary: 'Email me',
     note: 'Available in English and Persian for remote and project-based collaboration.',
+    tags: ['Corporate websites', 'Online stores', 'Frontend', 'Technical SEO'],
   },
   archive: {
     skip: 'Skip to Content',
